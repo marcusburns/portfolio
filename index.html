@@ -4,6 +4,21 @@
 <meta charset="UTF-8">
 <title>Marcus Burns</title>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>$(document).ready(function(){
+    // - 1.78 is the aspect ratio of the video
+    // - This will work if your video is 1920 x 1080
+    // - To find this value divide the video's native width by the height eg 1920/1080 = 1.78
+    var aspectRatio = 1.78;
+
+    var video = $('#videoWithJs iframe');
+    var videoHeight = video.outerHeight();
+    var newWidth = videoHeight*aspectRatio;
+    var halfNewWidth = newWidth/2;
+
+    video.css({"width":newWidth+"px","left":"50%","margin-left":"-"+halfNewWidth+"px"});
+
+});</script>
 <style>
 
 	video {	
@@ -43,7 +58,7 @@
 	<!--<style>.embed-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; } .embed-container iframe, .embed-container object, .embed-container embed { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }</style><div class='embed-container'><iframe src='https://player.vimeo.com/video/202719807?autoplay=1' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>-->
 	
 	<div class="youtubevideowrap">
-	<div class='videoWrapper'>
+	<div id="videoWithNoJs" class='videoWrapper'>
 		<iframe width="800" height="450" src='https://www.youtube.com/embed/SnRkalMQRvM?rel=0&autoplay=1&showinfo=0' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 	</div>
 	</div>
