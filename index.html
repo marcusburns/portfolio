@@ -18,7 +18,21 @@
 
     video.css({"width":newWidth+"px","left":"50%","margin-left":"-"+halfNewWidth+"px"});
 
-});</script>
+});
+	$(window).on('resize', function() {
+
+    // Same code as on load        
+    var aspectRatio = 1.78;
+    var video = $('#videoWithJs iframe');
+    var videoHeight = video.outerHeight();
+    var newWidth = videoHeight*aspectRatio;
+    var halfNewWidth = newWidth/2;
+
+    video.css({"width":newWidth+"px","left":"50%","margin-left":"-"+halfNewWidth+"px"});
+
+});
+	
+	</script>
 <style>
 
 	video {	
