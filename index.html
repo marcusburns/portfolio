@@ -25,7 +25,7 @@
     var aspectRatio = 1.78;
     var video = $('#videoWithJs iframe');
     var videoHeight = video.outerHeight();
-    var newWidth = videoHeight*aspectRatio;
+    var newWidth = (videoHeight*aspectRatio)-2;
     var halfNewWidth = newWidth/2;
 
     video.css({"width":newWidth+"px","left":"50%","margin-left":"-"+halfNewWidth+"px"});
@@ -49,9 +49,6 @@
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
-		border-style: solid;
-    border-width: 1px;
-		 border-color: red;
 	}
 	.videoWrapper iframe {
 	position: absolute;
