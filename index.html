@@ -79,8 +79,14 @@ mt.css({"width":newWidth+"px","left":"50%","margin-left":"-"+halfNewWidth+"px"})
 	padding-bottom:15px;
 	}
 	
-	.mytextarea{
-	max-width: 700px;
+	#wrapper {
+	  display: flex;
+	}
+	#left {
+	  flex: 0 0 65%;
+	}
+	#right {
+	  flex: 1;
 	}
 	
 	body{
@@ -114,7 +120,8 @@ mt.css({"width":newWidth+"px","left":"50%","margin-left":"-"+halfNewWidth+"px"})
 		</div>
 		
 		<div id="mytext" class='mytextwrap'>
-		<div class='mytextarea'>
+		<div id="wrapper" >
+			<div id="left">
 		<br>
 				
 		<h3>Hello. My name is Marcus.</h3>
@@ -158,6 +165,12 @@ mt.css({"width":newWidth+"px","left":"50%","margin-left":"-"+halfNewWidth+"px"})
 ';'+'&'+'#'+'1'+'0'+'5'+';'+'l'+'&'+'#'+'4'+'6'+';'+'c'+'o'+'m'+'<'+'/'+'a'+'>');</script><noscript>[Turn on JavaScript to see my email address]</noscript>
 	
 			<br>
+				</div>
+			<div id="right">
+			
+				<p>hello</p><br><p>goodbye</p>
+			
+			</div>
 			</div>
 		</div>
 	</div>
